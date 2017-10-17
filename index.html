@@ -29,12 +29,22 @@
 			ng-model = "formContent"></input>
 		</div>
 		<button type="submit" class = "btn btn-primary">Add Task</button>
-	<form>
+	<form></br></br>
 
-	<div ng-repeat="task in tasks | orderBy: '-priority'">
+	<div ng-repeat="task in tasks | orderBy: '+priority'">
+      		{{task.priority}}
 		<span class="glyphicon glyphicon-arrow-up"
+       			 ng-click="decreasePriority(task)"></span>
+		<span class="glyphicon glyphicon-arrow-down"
        			 ng-click="increasePriority(task)"></span>
-      			{{task.title}}  priority level:{{task.priority}}
-		</span>		
+		<strong>{{task.title}}</strong> 
+		<input type= "checkbox" ng-model = "completed" unchecked>
+		</span>	
+	</div>
+	</br></br>
+	<button type = "button" class = "btn btn-primary"> Remove Completed Tasks</button>	
+
+		
 </script>
+	
 </body>

@@ -30,7 +30,7 @@ function($scope, taskFactory){
     if($scope.formContent === '') { return; }
     $scope.tasks.push({
       title:$scope.formContent,
-      priority: 0,
+      priority: 1,
       notes: []
     });
     $scope.formContent = '';
@@ -38,6 +38,11 @@ function($scope, taskFactory){
 
   $scope.increasePriority = function(task) {
     task.priority += 1;
+  };
+
+  $scope.decreasePriority = function(task) {
+    if(task.priority > 1)
+	{task.priority -= 1;}
   };
 
 }]);
