@@ -31,9 +31,14 @@ function($scope, taskFactory){
     $scope.tasks.push({
       title:$scope.formContent,
       priority: 1,
+      completed:false;
       notes: []
     });
     $scope.formContent = '';
+  };
+
+  $scope.removeCompleted = function(){
+	//code for removal of checked boxes
   };
 
   $scope.increasePriority = function(task) {
