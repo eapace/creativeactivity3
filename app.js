@@ -36,7 +36,7 @@ function($scope, taskFactory){
     $scope.formContent = '';
   };
 
-  $scope.increase = function(task) {
+  $scope.increasePriority = function(task) {
     task.priority += 1;
   };
 

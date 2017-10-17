@@ -32,7 +32,7 @@
 	<form>
 
 	<div ng-repeat="task in tasks | orderBy: '-priority'">
-		<span class="glyphicon glyphicon-thumbs-up"
+		<span class="glyphicon glyphicon-arrow-up"
        			 ng-click="increasePriority(task)"></span>
       			{{task.title}}  priority level:{{task.priority}}
 		</span>		
