@@ -31,14 +31,9 @@ function($scope, taskFactory){
     $scope.tasks.push({
       title:$scope.formContent,
       priority: 1,
-      completed:false;
-      notes: []
+	complete:false
     });
     $scope.formContent = '';
-  };
-
-  $scope.removeCompleted = function(){
-	//code for removal of checked boxes
   };
 
   $scope.increasePriority = function(task) {
@@ -49,5 +44,14 @@ function($scope, taskFactory){
     if(task.priority > 1)
 	{task.priority -= 1;}
   };
+  
+  $scope.removeCompleted = function(task){
+  	var oldList = $scope.tasks;
+	$scope.tasks = [];
+	angular.forEach(oldList, function(x) {
+	if(!x.complete) {
+		$scope.tasks.push(x);
+	}})
+};
 
 }]);

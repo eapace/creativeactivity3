@@ -28,7 +28,7 @@
 			placeholder = "New Task"
 			ng-model = "formContent"></input>
 		</div>
-		<button type="submit" class = "btn btn-info">Add Task</button>
+		<button type="submit" class = "btn btn-primary">Add Task</button>
 	<form></br></br>
 
 	<div ng-repeat="task in tasks | orderBy: '+priority'">
@@ -38,13 +38,14 @@
 		<span class="glyphicon glyphicon-arrow-down"
        			 ng-click="increasePriority(task)"></span>
 		<strong>{{task.title}}</strong> 
-		<input type= "checkbox" ng-model ="completed" unchecked>
 		</span>	
+		<input type="checkbox" ng-model="task.complete">
 	</div>
 	</br></br>
-	<button type = "button" class = "btn btn-danger" ng-submit="removeCompleted()"> Remove Completed Tasks</button>	
-
-		
+	
+	<button ng-click="removeCompleted()">Remove Completed Tasks</button>
+	
 </script>
 	
+</body>
 </body>
