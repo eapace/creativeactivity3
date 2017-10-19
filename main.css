@@ -1,17 +1,25 @@
+
 body {
- background-color:lightblue;
+ background-color:lightgray;
 }
 
 div {
  text-align:center;
-left:50%;
 }
 
-#form-group {
+.form-group {
  width:400px;
+position:relative;
+margin:auto;
 }
 
-#form-control {
+.form-control {
  width:400px;
  size:35;
+}
+
+#list{
+border-style:double;
+border-width:3px;
+border-color:#7c7c7c;
 }

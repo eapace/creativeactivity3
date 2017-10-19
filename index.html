@@ -1,8 +1,8 @@
 <html>
 <head>
   <title>ToDo List</title>
-  <link rel = "stylesheet" href ="main.css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel = "stylesheet" href ="main.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
 
@@ -31,9 +31,10 @@
 			</input>
                         
 		</div>
-		<button type="submit" class = "btn btn-primary">Add Task</button>
+		<button type="submit" class = "btn btn-danger">Add Task</button>
 	<form></br></br>
 
+	<div id = "list"></br>
 	<div ng-repeat="task in tasks | orderBy: '+priority'">
       		{{task.priority}}
 		<span class="glyphicon glyphicon-arrow-up"
@@ -43,10 +44,10 @@
 		<strong>{{task.title}}</strong> 
 		</span>	
 		<input type="checkbox" ng-model="task.complete">
-	</div>
-	</br></br>
+	</div></br></div>
+	</br>
 	
-	<button ng-click="removeCompleted()">Remove Completed Tasks</button>
+	<button class = "btn btn-danger" ng-click="removeCompleted()">Remove Completed Tasks</button>
 	
 </script>
 	
