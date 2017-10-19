@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>ToDo List</title>
-
+  <link rel = "stylesheet" href ="main.css"/>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
@@ -22,11 +22,14 @@
 	<form ng-submit="addTask()"
 		<h3>Add a new task to your list</h3>
 	
-		<div class= "form-group">
+		<div class= "form-group" width="400px">
 		<input type = "text"
 			class = "form-control"
 			placeholder = "New Task"
-			ng-model = "formContent"></input>
+			ng-model = "formContent"
+			size = "35">
+			</input>
+                        
 		</div>
 		<button type="submit" class = "btn btn-primary">Add Task</button>
 	<form></br></br>

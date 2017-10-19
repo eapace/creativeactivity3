@@ -1,0 +1,17 @@
+body {
+ background-color:lightblue;
+}
+
+div {
+ text-align:center;
+left:50%;
+}
+
+#form-group {
+ width:400px;
+}
+
+#form-control {
+ width:400px;
+ size:35;
+}
